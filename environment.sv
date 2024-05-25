@@ -1,8 +1,3 @@
-//-------------------------------------------------------------------------
-//						www.verificationguide.com
-//-------------------------------------------------------------------------
-
-
 package P;
 `include "transaction.sv" 
 endpackage 
@@ -13,27 +8,20 @@ endpackage
 `include "scoreboard.sv"
 
 class environment;
-  
-  //generator and driver instance
+
   generator 	gen;
   driver    	driv;
   monitor   	mon;
   scoreboard	scb;
   
-  
-  //mailbox handle's
   mailbox gen2driv;
   mailbox mon2scb;
   
-  //virtual interface
   virtual intf vif;
-  
-  //constructor
+
   function new(virtual intf vif);
     //get the interface from test
     this.vif = vif;
-    
-    //creating the mailbox (Same handle will be shared across generator and driver)
     gen2driv = new();
     mon2scb  = new();
     
