@@ -1,18 +1,5 @@
-//-------------------------------------------------------------------------
-//				www.verificationguide.com   testbench.sv
-//-------------------------------------------------------------------------
-//tbench_top or testbench top, this is the top most file, in which DUT(Design Under Test) and Verification environment are connected. 
-//-------------------------------------------------------------------------
-
-//including interfcae and testcase files
 `include "interface.sv"
-
-//-------------------------[NOTE]---------------------------------
-//Particular testcase can be run by uncommenting, and commenting the rest
 `include "test.sv"
-//`include "directed_test.sv"
-//----------------------------------------------------------------
-
 module tbench_top;
   
   //clock and reset signal declaration
